@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="coleStyle.css">
+		<title>Heat Index Calculator</title>
+	</head>
+	<body>
+		<h1 style: align = 'center'>Heat Index Calculator</h1></br>
+		<p style: align ='center'>The Heat Index Calculator accepts a Fahrenheit temperature and Relative Humidity</br> Percentage (an integer between 0 - 100), and computes and records the indexed heat.</p>
+		<div style: width = 100%>
+			<form onsubmit="return false;">
+				Fahrenheit:</br></br>
+				<input type = 'number' id = 'tempInput' value = 0/></br></br>
+				Relative Humidity:</br></br>
+				<input type = 'number' id = 'relHumInput' value = 0/></br>
+				<button onclick = 'computeIndex();'>Compute</button>
+				<output id = 'result' style: align = 'center'></output>
+			</form>
+		</div>
+	</body>
+	<script>
+		function computeIndex() {
+			var input1 = document.querySelector('#tempInput');
+			var input2 = document.querySelector('#relHumInput');
+			var output = document.querySelector('#result');
+			var temp = input1.value;
+			console.log(temp);
+			var relHum = input2.vaue;
+			console.log(relHum);
+			var index = -42.379 + 2.04901523 * temp + 10.14333127 * relHum - 0.22475541 * temp * relHum - 0.00683783 * (temp*temp) - 0.05481717 * (relHum*relHum) + 0.00122874 * (temp*temp) * relHum + 0.00085282 * temp * (relHum*relHum) - 0.00000199 * (temp*temp) * (relHum*relHum);
+			output.innerHTML = 'Indexed Heat: ' + index;
+		}
+	</script>
+</html>
+</html>
