@@ -1,0 +1,9 @@
+body {background-color: lightblue;}
+
+h1 {color: orange;
+	font-family: Serif;
+	border: solid 4px yellow;}
+	
+p {color: red;
+	font-family: Sans;
+	border-bottom: solid 3px green;}
